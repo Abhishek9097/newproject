@@ -1,0 +1,35 @@
+.opal-wrapper {
+    overflow: hidden;
+}
+.opal-wrapper .mp-menu {
+    position: fixed;
+    /* we can't use fixed here :( */
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+    height: 100%;
+    -webkit-transform: translate3d(-200px, 0, 0);
+    -moz-transform: translate3d(-200px, 0, 0);
+    transform: translate3d(-200px, 0, 0);
+    display: block;
+    transition: all ease 0.35s;
+    opacity: 0; }
+.opal-wrapper .mp-menu.mp-menu-active {
+    z-index: 3;
+    transform: translate3d(0, 0, 0);
+    opacity: 1; }
+.opal-wrapper .mp-menu.mp-menu-active + #page {
+    transform: translateX(300px); }
+.opal-wrapper .mp-menu.mp-menu-active + #page:before {
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0.4); }
+.mp-level {
+    overflow: scroll;
+}
